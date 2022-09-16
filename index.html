@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <input type="text" class="screen" placeholder="0" id="screen">
+        <table>
+            <tr>
+                <td>
+                    <button id="clear-button" onclick="clearScreen()">C</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="showVal('/')">/</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="showVal('%')">%</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="showVal('7')">7</button>
+                </td>
+                <td>
+                    <button onclick="showVal('8')">8</button>
+                </td>
+                <td>
+                    <button onclick="showVal('9')">9</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="showVal('*')">x</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="showVal('4')">4</button>
+                </td>
+                <td>
+                    <button onclick="showVal('5')">5</button>
+                </td>
+                <td>
+                    <button onclick="showVal('6')">6</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="showVal('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="showVal('1')">1</button>
+                </td>
+                <td>
+                    <button onclick="showVal('2')">2</button>
+                </td>
+                <td>
+                    <button onclick="showVal('3')">3</button>
+                </td>
+                <td>
+                    <button class="symbols" onclick="showVal('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="showVal('0')">0</button>
+                </td>
+                <td>
+                    <button onclick="showVal('.')">.</button>
+                </td>
+                <td>
+                    <button class="equalsToBtn" onclick="evaluateExp()">=</button>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
